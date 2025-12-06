@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container-fluid.h-100 {
+    min-height: 0;
+}
+
+#layout-row,
+#sidebar,
+#main-content {
+    min-height: 0;
+}
+
+#content-area {
+    min-height: 0;
+}
+
+.file-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    background-color: #f8f9fa;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 500px;
+}
+
+@media (max-width: 991.98px) {
+    #sidebar {
+        min-width: 0;
+        max-width: 100%;
+        min-height: 180px;
+        overflow: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    #main-content {
+        flex: 1 1 auto;
+    }
+
+    #main-content {
+        height: auto !important;
+    }
+}
+
+#file-tree {
+    font-size: 0.9rem;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+}
